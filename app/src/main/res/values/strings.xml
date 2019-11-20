@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AND_App</string>
+    <string name="welcome">Welcome</string>
+    <string name="logout">Logout</string>
 </resources>
