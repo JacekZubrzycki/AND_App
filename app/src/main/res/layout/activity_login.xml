@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-
+    tools:context=".LoginActivity">
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="99dp"
@@ -24,7 +22,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -34,11 +32,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogin"
         app:layout_constraintVertical_bias="0.111" />
 
     <Button
-        android:id="@+id/signUp"
+        android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
@@ -48,18 +46,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewLogin"
+        android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gotta account?"
+        android:text="Not registered?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        app:layout_constraintTop_toBottomOf="@+id/signIn"
         app:layout_constraintVertical_bias="0.093" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
