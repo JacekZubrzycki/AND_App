@@ -1,16 +1,15 @@
 package com.example.and_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -44,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser fireBaseUser = fireBaseAuth.getCurrentUser();
                 if (fireBaseUser != null) {
                     Toast.makeText(LoginActivity.this, "Youre are logged in", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    Intent i = new Intent(LoginActivity.this, HomeActivity2.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(LoginActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
@@ -71,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login Error, please try again", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(LoginActivity.this, "Check", Toast.LENGTH_SHORT).show();
-                                Intent toHome = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent toHome = new Intent(LoginActivity.this, HomeActivity2.class);
                                 startActivity(toHome);
                             }
                         }
