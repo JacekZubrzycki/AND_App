@@ -159,11 +159,11 @@ public class HomeActivity2 extends AppCompatActivity {
 
                             Task<Uri> urlTask = taskSnapshot.getStorage().getDownloadUrl();
 
-                            while (!urlTask.isSuccessful());
+                            while (!urlTask.isSuccessful()) ;
 
                             Uri downloadUrl = urlTask.getResult();
 
-                            Upload upload = new Upload(editText.getText().toString().trim(),downloadUrl.toString());
+                            Upload upload = new Upload(editText.getText().toString().trim(), downloadUrl.toString());
 
                             String uploadId = databaseReference.push().getKey();
 
@@ -240,7 +240,7 @@ public class HomeActivity2 extends AppCompatActivity {
     }
 
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch(menuItem.getItemId()) {
+        switch (menuItem.getItemId()) {
             case R.id.nav_home:
 
                 drawer.closeDrawer(GravityCompat.START);
@@ -260,5 +260,15 @@ public class HomeActivity2 extends AppCompatActivity {
         }
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent toSettings = new Intent(HomeActivity2.this, SettingsActivity.class);
+                startActivity(toSettings);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
+    }
 }
